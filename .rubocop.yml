@@ -1,0 +1,23 @@
+require:
+  - rubocop-performance
+  - rubocop-rspec
+
+AllCops:
+  NewCops: enable
+
+Layout/LineLength:
+  Max: 150
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - simple_policy.gemspec
+    - "spec/**/*.rb"
+
+RSpec/MultipleExpectations:
+  Max: 20
+
+RSpec/ExampleLength:
+  Max: 50

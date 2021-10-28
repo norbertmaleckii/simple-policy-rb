@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'bundler/setup'
+require 'simple_policy'
+
+require_relative '../examples/user_end_of_subscription_policy'
+
+require 'pry'
+require 'irb'
+
+IRB.start(__FILE__)
