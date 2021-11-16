@@ -2,11 +2,17 @@
 
 module SimplePolicy
   class Entity
-    include Callee
+    attr_reader :object, :options, :block
 
-    param :object
-    param :options, default: proc { {} }
-    param :block, optional: true
+    def initialize(object, options, block)
+      @object = object
+      @options = options
+      @block = block
+    end
+
+    def self.call(*params, **options, &block)
+      new(*params, **options).call(&block)
+    end
 
     def self.object_alias(name)
       define_method(name) do

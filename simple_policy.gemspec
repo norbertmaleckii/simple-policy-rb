@@ -32,8 +32,5 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'callee'
-  spec.add_dependency 'dry-initializer'
-
   spec.add_development_dependency 'pry'
 end
